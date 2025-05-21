@@ -110,11 +110,30 @@ function check() {
 }
 
 function showClock() {
-  let nowTime = new Date();
-  let nowHour = nowTime.getHours();
-  let nowMin = nowTime.getMinutes();
-  let nowSec = nowTime.getSeconds();
-  let msg = "現在時刻：" + nowHour + ":" + nowMin + ":" + nowSec;
-  document.getElementById("realtime").innerHTML = msg;
+  const weeks = ["日", "月", "火", "水", "木", "金", "土"];
+
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  const week = weeks[date.getDay()];
+  const hour = String(date.getHours()).padStart(2, "0");
+  const minute = String(date.getMinutes()).padStart(2, "0");
+  const second = String(date.getSeconds()).padStart(2, "0");
+  const str_data =
+    year +
+    "年" +
+    month +
+    "月" +
+    day +
+    "日(" +
+    week +
+    ") " +
+    hour +
+    ":" +
+    minute +
+    ":" +
+    second;
+  document.getElementById("realtime").innerHTML = str_data;
 }
 setInterval("showClock()", 1000);
