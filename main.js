@@ -7,12 +7,10 @@ const createWindow = () => {
     width: width,
     height: height,
     title: "touch_panel",
-    /*
     fullscreen: true,
     autoHideMenuBar: true,
     frame: false,
     alwaysOnTop: true,
-    */
   });
   mainWindow.setVisibleOnAllWorkspaces(true); // Ensure visibility across workspaces
   mainWindow.loadFile("index.html");

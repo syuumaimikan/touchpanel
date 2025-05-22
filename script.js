@@ -13,10 +13,10 @@ const cancel = document.getElementById("cancel");
 const audio_sorce = document.getElementById("audio_sorce");
 const cameraWidth = 1280;
 const cameraHeight = 720;
-const name_color = "#9276df";
-const todo_color = "#9276df";
-const call_cancel_color = "#9276df";
-const selected_color = "#240086";
+const name_color = "#797979";
+const todo_color = "#797979";
+const call_cancel_color = "#797979";
+const selected_color = "#14004b";
 
 const mp3s = [
   "buzzer01.mp3",
