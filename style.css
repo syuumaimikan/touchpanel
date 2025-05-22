@@ -22,6 +22,19 @@ body {
   padding: 8px 12px;
   border-radius: 6px;
   z-index: 1000;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #camera {
@@ -76,30 +89,90 @@ ul {
 
 .names {
   margin-bottom: 30px;
+  color: white;
+}
+.todo {
+  margin-bottom: 30px;
+  color: white;
 }
 
 li {
   padding: 10px 5px;
   margin: 10px;
   font-size: 30px;
-  border: 1px solid #ddd;
+  border: 1px solid #240086;
   text-align: center;
   width: calc(33% - 10px);
   height: 30vh;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .names li {
-  background-color: #e6f2ff;
+  background-color: #9276df;
 }
 
 .todo li {
-  background-color: #ffe6e6;
+  background-color: #9276df;
 }
 
 #realtime {
-  position: fixed;
-  right: 5%;
-  top: 1%;
   font-size: xx-large;
   writing-mode: horizontal-tb;
+}
+
+.call_cancel {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  justify-content: space-around;
+}
+.call_cancel button {
+  writing-mode: horizontal-tb;
+  font-size: xx-large;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #9276df;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 230px;
+}
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  #camera {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .vertical {
+    width: 100%;
+    flex-direction: column;
+    writing-mode: horizontal-tb;
+  }
+
+  .items {
+    flex-direction: column;
+  }
+
+  ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  li {
+    width: auto;
+    height: auto;
+    font-size: 24px;
+  }
+
+  #realtime {
+    position: static;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
