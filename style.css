@@ -1,20 +1,26 @@
+/* =============================
+   レイアウト・全体設定
+   ============================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  user-select: none;
+  user-select: none; /* テキスト選択禁止 */
 }
 
 body {
-  display: flex;
+  display: flex; /* 横並びレイアウト */
   height: 100vh;
   overflow: hidden;
-  background-color: #b6b6b6;
+  background-color: #b6b6b6; /* 背景色 */
 }
 
+/* =============================
+   カメラステータス表示
+   ============================= */
 #camera-status {
-  display: none;
+  display: none; /* 初期は非表示 */
   position: absolute;
   top: 10px;
   left: 10px;
@@ -23,7 +29,7 @@ body {
   padding: 8px 12px;
   border-radius: 6px;
   z-index: 1000;
-  animation: blink 1s infinite;
+  animation: blink 1s infinite; /* 点滅アニメーション */
 }
 
 @keyframes blink {
@@ -38,17 +44,23 @@ body {
   }
 }
 
+/* =============================
+   カメラ映像エリア
+   ============================= */
 #camera {
   width: 60%;
   height: 100vh;
-  object-fit: cover;
+  object-fit: cover; /* 映像を枠いっぱいに */
   background-color: #ffffff;
-  background-image: url("./assets/img/camera00.jpg");
+  background-image: url("./assets/img/camera00.jpg"); /* デフォルト画像 */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+/* =============================
+   メイン・縦レイアウト
+   ============================= */
 .main {
   display: flex;
 }
@@ -56,7 +68,7 @@ body {
 .vertical {
   width: 40%;
   padding: 15px;
-  writing-mode: vertical-rl;
+  writing-mode: vertical-rl; /* 縦書き */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -64,7 +76,7 @@ body {
 }
 
 .horizontal {
-  writing-mode: horizontal-tb;
+  writing-mode: horizontal-tb; /* 横書き */
   font-size: xx-large;
 }
 
@@ -76,6 +88,9 @@ body {
   width: 100%;
 }
 
+/* =============================
+   リスト（担当者・要件）
+   ============================= */
 ul {
   list-style-type: none;
   margin-bottom: 20px;
@@ -89,7 +104,7 @@ ul {
 
 .names {
   margin-bottom: 30px;
-  color: white;
+  color: white; /* 文字色 */
 }
 .todo {
   margin-bottom: 30px;
@@ -102,24 +117,30 @@ li {
   font-size: 50px;
   border: 1px solid #14004b;
   text-align: center;
-  width: calc(33% - 10px);
+  width: calc(33% - 10px); /* 3列分割 */
   height: 30vh;
-  cursor: pointer;
+  cursor: pointer; /* クリック可能 */
 }
 
 .names li {
-  background-color: #9276df;
+  background-color: #9276df; /* 担当者リスト背景 */
 }
 
 .todo li {
-  background-color: #9276df;
+  background-color: #9276df; /* 要件リスト背景 */
 }
 
+/* =============================
+   時計表示
+   ============================= */
 #realtime {
   font-size: xx-large;
   writing-mode: horizontal-tb;
 }
 
+/* =============================
+   呼出・取消ボタン
+   ============================= */
 .call_cancel {
   display: flex;
   flex-direction: column-reverse;
@@ -139,6 +160,10 @@ li {
   transition: background-color 0.2s ease;
   width: 230px;
 }
+
+/* =============================
+   レスポンシブ対応（スマホ・タブレット）
+   ============================= */
 @media screen and (max-width: 768px) {
   body {
     flex-direction: column;

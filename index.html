@@ -8,16 +8,21 @@
   </head>
   <body>
     <div class="main">
+      <!-- カメラ起動中のステータス表示（初期は非表示） -->
       <div id="camera-status" style="display: none; color: red">
         カメラ起動中...
       </div>
+      <!-- カメラ映像表示用のvideo要素 -->
       <video id="camera" autoplay muted playsinline></video>
       <div class="vertical">
+        <!-- 現在時刻表示エリア -->
         <p id="realtime"></p>
+        <!-- 担当者選択エリア -->
         <div class="items">
           <div class="horizontal"><u>１.担当者を選択してください</u></div>
           <ul class="names">
             <li>奈津美</li>
+            <!-- 担当者リスト（クリックで選択） -->
             <li>僚　太</li>
             <li>青　井</li>
             <li>崇　文</li>
@@ -26,25 +31,32 @@
             <li>遠　谷</li>
           </ul>
         </div>
+        <!-- 要件選択エリア -->
         <div class="items">
           <div class="horizontal"><u>２.要件を選択してください</u></div>
           <ul class="todo">
             <li>？？？</li>
+            <!-- 要件リスト（クリックで選択） -->
             <li>納　品</li>
             <li>打合せ</li>
             <li>伝　票</li>
             <li>見　積</li>
           </ul>
         </div>
+        <!-- 呼出・取消ボタンエリア -->
         <div class="call_cancel">
           <button type="button" id="call">呼出</button>
+          <!-- 呼出ボタン -->
           <button type="button" id="cancel">取消</button>
+          <!-- 取消ボタン -->
         </div>
       </div>
     </div>
+    <!-- ブザー音再生用audio要素（ループ再生） -->
     <audio id="buzzer" loop>
       <source id="audio_sorce" type="audio/mp3" />
     </audio>
+    <!-- メインスクリプト読み込み -->
     <script src="script.js"></script>
   </body>
 </html>
