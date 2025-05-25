@@ -7,6 +7,7 @@
   box-sizing: border-box;
   font-family: sans-serif;
   user-select: none; /* テキスト選択禁止 */
+  cursor: none; /* カーソルを非表示 */
 }
 
 body {
@@ -114,12 +115,11 @@ ul {
 li {
   padding: 10px 5px;
   margin: 10px;
-  font-size: 50px;
+  font-size: 40px;
   border: 1px solid #14004b;
   text-align: center;
   width: calc(33% - 10px); /* 3列分割 */
   height: 30vh;
-  cursor: pointer; /* クリック可能 */
 }
 
 .names li {
@@ -156,7 +156,6 @@ li {
   border: 1px solid #14004b;
   background-color: #797979;
   color: white;
-  cursor: pointer;
   transition: background-color 0.2s ease;
   width: 230px;
 }
