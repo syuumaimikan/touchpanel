@@ -17,22 +17,6 @@ body {
   background-color: #b6b6b6; /* 背景色 */
 }
 
-/* =============================
-   カメラステータス表示
-   ============================= */
-#camera-status {
-  display: none; /* 初期は非表示 */
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: "#b6b6b6";
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  z-index: 1000;
-  animation: blink 1s infinite; /* 点滅アニメーション */
-}
-
 @keyframes blink {
   0% {
     opacity: 1;
